@@ -46,10 +46,12 @@ form.addEventListener("submit", function (event) {
 
 	// validate the form
 	let classValid = hasValue(form.elements["class"], CLASS_REQUIRED);
-    
+    let subjectValid = hasValue(form.elements["subject"], SUBJECT_REQUIRED);
+    let dateValid = hasValue(form.elements["date"], DATE_REQUIRED);
+
 	
 	// if valid, submit the form.
-	if (classValid && emailValid) {
+	if (classValid && subjectValid && dateValid) {
 		alert("Please fill all the information required");
 	}
 });
